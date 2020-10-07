@@ -12,41 +12,46 @@
   <nav class="navbar has-background-light" id="navbar">
     <div class="navbar-brand">
       <a href="/" class="navbar-item">
-        <img src="/assets/loginet_logo_nav_color.svg" alt="loginet logo">
+        <img src="./assets/loginet_logo_nav_color.svg" alt="loginet logo">
+      </a>
+      <a class="navbar-burger" id="burger">
+        <span></span>
+        <span></span>
+        <span></span>
       </a>
     </div>
     
-    <div class="navbar-menu">
+    <div class="navbar-menu" id="nav-links">
       <div class="navbar-start">
         <a class="navbar-item has-text-weight-light">Főoldal</a>
         <a class="navbar-item has-text-weight-light">Hírek</a>
-        <div class="navbar-item has-dropdown is-hoverable ">
+        <div class="navbar-item has-dropdown" id="dropdown">
           <a class="navbar-link has-text-weight-light">Egyéb</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item has-text-weight-light">Rólunk</a>
+            <a class="navbar-item has-text-weight-light">Karrier</a>
+            <a class="navbar-item has-text-weight-light">Kapcsolat</a>
+            <a class="navbar-item has-text-weight-light">Hiba Bejelentés</a>
+          </div>
         </div>
-        <div class="navbar-dropdown">
-          <a class="navbar-item has-text-weight-light">Rólunk</a>
-          <a class="navbar-item has-text-weight-light">Karrier</a>
-          <a class="navbar-item has-text-weight-light">Kapcsolat</a>
-          <a class="navbar-item has-text-weight-light">Hiba Bejelentés</a>
+      </div>
+      <div class="navbar-end">
+        <div class="navbar-item">
+          <div class="buttons">
+            <button class="button">
+              Regisztráció
+            </button>
+            <button class="button has-text-white" id="login-btn">
+              <span class="icon is-small">
+                <i class="fas fa-sign-in-alt"></i>
+              </span>
+              <span>Belépés</span>
+            </button>
+          </div>
         </div>
       </div>
     </div>
     
-    <div class="navbar-end">
-      <div class="navbar-item">
-        <div class="buttons">
-          <button class="button">
-            Regisztráció
-          </button>
-          <button class="button has-text-white" id="login-btn">
-            <span class="icon is-small">
-              <i class="fas fa-sign-in-alt"></i>
-            </span>
-            <span>Belépés</span>
-          </button>
-        </div>
-      </div>
-    </div>
   </nav>
   
   <!-- COVER -->
@@ -58,6 +63,17 @@
     </div>
   </secion>
 
+  <!-- POP UP -->
+  <div class="modal" id="pop-up">
+    <div class="modal-background"></div>
+    <div class="modal-content">
+      <div class="notification is-danger">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis libero sed nobis dolore iure tempora quas necessitatibus, nesciunt totam at labore in accusamus facere consequuntur fugit dicta impedit maxime quam quibusdam perspiciatis. Quasi veritatis laboriosam autem sunt necessitatibus voluptatum deleniti quis natus doloribus sint impedit iure ab eveniet ipsum nobis odio inventore itaque maiores molestias quae officia, consequuntur doloremque adipisci.
+      </div>
+    </div>
+    <button class="modal-close is-large" aria-label="close" id="pop-up-close"></button>
+  </div>
+
   <!-- SERVICES -->
   <section class="section has-background-light">
     <div class="container">
@@ -68,7 +84,7 @@
           <div class="card">
             <div class="card-image">
               <figure class="image is-4by3">
-                <img src="/assets/TILE_4NmwlW.jpg" alt="laptop">
+                <img src="./assets/TILE_4NmwlW.jpg" alt="laptop">
               </figure>
             </div>
             <div class="card-content">
@@ -84,7 +100,7 @@
           <div class="card">
             <div class="card-image">
               <figure class="image is-4by3">
-                <img src="/assets/TILE_Af275g.jpg" alt="event presentation">
+                <img src="./assets/TILE_Af275g.jpg" alt="event presentation">
               </figure>
             </div>
             <div class="card-content">
@@ -100,7 +116,7 @@
           <div class="card">
             <div class="card-image">
               <figure class="image is-4by3">
-                <img src="/assets/TILE_bmq8Q1.jpg" alt="hand stopping dominos">
+                <img src="./assets/TILE_bmq8Q1.jpg" alt="hand stopping dominos">
               </figure>
             </div>
             <div class="card-content">
@@ -116,7 +132,7 @@
           <div class="card">
             <div class="card-image">
               <figure class="image is-4by3">
-                <img src="/assets/TILE_LZViy7.jpg" alt="man prezenting on event">
+                <img src="./assets/TILE_LZViy7.jpg" alt="man prezenting on event">
               </figure>
             </div>
             <div class="card-content">
@@ -182,16 +198,17 @@
           <div class="field">
             <label class="label">Név</label>
             <div class="control has-icons-left">
-              <input type="text" class="input" placeholder="Név">
+              <input type="text" class="input" placeholder="Név" id="name">
               <span class="icon is-small is-left">
                 <i class="fas fa-user"></i>
               </span>
             </div>
+            <p class="has-text-danger is-size-7 is-hidden" id="error-message">Kérlek add meg a teljes nevedet!</p>
           </div>
           <div class="field">
             <label class="label">Email cím</label>
             <div class="control has-icons-left">
-              <input type="text" class="input" placeholder="Email cím">
+              <input type="text" class="input" placeholder="Email cím" id="email">
               <span class="icon is-small is-left">
                 <i class="fas fa-envelope"></i>
               </span>
@@ -201,8 +218,8 @@
             <label class="label">Tárgy</label>
             <div class="control">
               <div class="select">
-                <select>
-                  <option>Válaszz egy lehetőséget</option>
+                <select id="select">
+                  <option value="">Válaszz egy lehetőséget</option>
                   <option>#1 Lehetőség</option>
                   <option>#2 Lehetőség</option>
                   <option>#3 Lehetőség</option>
@@ -215,13 +232,13 @@
           <div class="field">
             <label class="label">Üzenet</label>
             <div class="control">
-              <textarea class="textarea" placeholder="Ide írhatod az üzenetedet"></textarea>
+              <textarea class="textarea" placeholder="Ide írhatod az üzenetedet" id="message"></textarea>
             </div>
           </div>
           <div class="field">
             <div class="control">
               <label class="checkbox">
-                <input type="checkbox">
+                <input type="checkbox" id="checkbox">
                 Elfogadom az <a href="#">Adatvédelmi Nyilatkozatban</a> foglaltakat.
               </label>
             </div>
@@ -231,7 +248,7 @@
               <button class="button has-text-white" id="submit-btn">Küldés</button>
             </div>
             <div class="control">
-              <button class="button is-link">Mégse</button>
+              <button class="button is-link" id="cancel-btn">Mégse</button>
             </div>
           </div>
         </div>
@@ -249,5 +266,6 @@
   </footer>
   
   <script src="https://kit.fontawesome.com/ccbfd8db84.js" crossorigin="anonymous"></script>
+  <script src="./index.js"></script>
 </body>
 </html>
