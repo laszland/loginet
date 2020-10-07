@@ -1,0 +1,14 @@
+#navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+#login-btn, #download-btn, #btn-more-1, #submit-btn, .is-child {
+  background-color: #e5692c;
+}
+
+#cover {
+  background-image: url("./assets/MAINPAGE_8eMt9a.jpg");
+  background-size: cover;
+}
