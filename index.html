@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="has-navbar-fixed-top">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,7 +9,7 @@
 </head>
 <body>
   <!-- NAVBAR -->
-  <nav class="navbar has-background-light" id="navbar">
+  <nav class="navbar has-background-light is-fixed-top">
     <div class="navbar-brand">
       <a href="/" class="navbar-item">
         <img src="./assets/loginet_logo_nav_color.svg" alt="loginet logo">
@@ -55,7 +55,7 @@
   </nav>
   
   <!-- COVER -->
-  <secion class="hero is-medium" id="cover">
+  <secion class="hero is-medium is-large-mobile" id="cover">
     <div class="hero-body has-text-centered">
       <h1 class="title is-uppercase has-text-white is-size-5">Hogyan hozd ki a legtöbbet az e-kereskedelemből?</h1>
       <h2 class="subtitle has-text-white is-size-7">Tudd meg Ecommerce sikerkönyvünkből!</h2>
@@ -88,11 +88,13 @@
               </figure>
             </div>
             <div class="card-content">
-              <h1 class="title is-size-6">E-commerce fejlesztés</h1>
-              <p class="is-size-7 mb-4">Professzionális e-kereskedelmi rendszerek felépítése komplex szolgáltatással: tratégia, tanácsadás, tervezés, fejlesztés, support.</p>
-              <div class="has-text-right">
-                <button class="button is-size-7 is-white orange has-text-white" id="btn-more-1">Tovább</button>
+              <div class="card-content-body">
+                <h1 class="title is-size-6">E-commerce fejlesztés</h1>
+                <p class="is-size-7 mb-4">Professzionális e-kereskedelmi rendszerek felépítése komplex szolgáltatással: tratégia, tanácsadás, tervezés, fejlesztés, support.</p>
               </div>
+            </div>
+            <div class="mr-5 mb-5">
+              <button class="is-small button is-pulled-right is-white has-text-white" id="btn-more-1">Tovább</button>
             </div>
           </div>
         </div>
@@ -104,11 +106,13 @@
               </figure>
             </div>
             <div class="card-content">
-              <h1 class="title is-size-6">Webes szoftverfejlesztés</h1>
-              <p class="is-size-7 mb-4">A leghatékonyabb vállati működést segítő egyedi fejlesztések közép- és nagyvállalatok, startupok igényeire hangoltan.</p>
-              <div class="has-text-right">
-                <button class="button is-size-7 is-white orange has-text-white" id="btn-more-1">Tovább</button>
+              <div class="card-content-body">
+                <h1 class="title is-size-6">Webes szoftverfejlesztés</h1>
+                <p class="is-size-7 mb-4">A leghatékonyabb vállati működést segítő egyedi fejlesztések közép- és nagyvállalatok, startupok igényeire hangoltan.</p>
               </div>
+            </div>
+            <div class="mr-5 mb-5">
+              <button class="is-small button is-pulled-right is-white has-text-white" id="btn-more-2">Tovább</button>
             </div>
           </div>
         </div>
@@ -120,12 +124,14 @@
               </figure>
             </div>
             <div class="card-content">
-              <h1 class="title is-size-6">Mobil applikáció fejlesztés</h1>
-              <p class="is-size-7 mb-4">Mobil célcsoport eléréséhez ideális megoldások tervezése és fejlesztése natív Andriod, iOs megoldásokkal, saját termékkel.</p>
-              <div class="has-text-right">
-                <button class="button is-size-7 is-white orange has-text-white" id="btn-more-1">Tovább</button>
+              <div class="card-content-body">
+                <h1 class="title is-size-6">Mobil applikáció fejlesztés</h1>
+                <p class="is-size-7 mb-4">Mobil célcsoport eléréséhez ideális megoldások tervezése és fejlesztése natív Andriod, iOs megoldásokkal, saját termékkel.</p>
               </div>
             </div>
+              <div class="mr-5 mb-5">
+                <button class="is-small button is-pulled-right is-white has-text-white" id="btn-more-3">Tovább</button>
+              </div>
           </div>
         </div>
         <div class="column">
@@ -136,11 +142,13 @@
               </figure>
             </div>
             <div class="card-content">
-              <h1 class="title is-size-6">Nagyvállalati szoftverfejlesztés</h1>
-              <p class="is-size-7 mb-4">IT fejlesztési projektek a <br> nagyvállalatok komplex elvárásainak megfelelve.</p>
-              <div class="has-text-right">
-                <button class="button is-size-7 is-white orange has-text-white" id="btn-more-1">Tovább</button>
+              <div class="card-content-body">
+                <h1 class="title is-size-6">Nagyvállalati szoftverfejlesztés</h1>
+                <p class="is-size-7 mb-4">IT fejlesztési projektek a nagyvállalatok komplex elvárásainak megfelelve.</p>
               </div>
+            </div>
+            <div class="mr-5 mb-5">
+              <button class="is-small button is-pulled-right is-white has-text-white" id="btn-more-4">Tovább</button>
             </div>
           </div>
         </div>
@@ -155,30 +163,42 @@
       <h1 class="title is-size-3 mb-1">Termékeink</h1>
       <p class="is-size-6 mb-5">Digitális megoldásaink az üzletmenet hatékonyabbá tételéhez.</p>
       <div class="tile is-ancestor">
-        <div class="tile is-6 is-vertical is-parent">
-          <article class="tile notification is-child py-5 px-5">
-            <p class="title has-text-white">Webshop ökoszisztéma</p>
-          </article>
-          <article class="tile notification is-child py-5 px-5">
-            <p class="title has-text-white">Macomapp Mobilshop</p>
-          </article>
+        <div class="tile is-6 is-vertical">
+          <div class="tile is-parent">
+            <article class="tile notification is-child py-5 px-5">
+              <p class="title has-text-white">Webshop ökoszisztéma</p>
+            </article>
+          </div>
+          <div class="tile is-parent">
+            <article class="tile notification is-child py-5 px-5">
+              <p class="title has-text-white">Macomapp Mobilshop</p>
+            </article>
+          </div>
         </div>
         <div class="tile">
-          <div class="tile is-vertical is-parent">
-            <article class="tile notification is-child py-5 px-5">
-              <p class="title has-text-white">Salesman Tracker</p>
-            </article>
-            <div class="tile">
+          <div class="tile is-vertical">
+            <div class="tile is-parent">
               <article class="tile notification is-child py-5 px-5">
-                <p class="title has-text-white">Archivátor</p>
+                <p class="title has-text-white">Salesman Tracker</p>
               </article>
-              <div class="tile is-vertical">
+            </div>
+            <div class="tile">
+              <div class="tile is-parent">
                 <article class="tile notification is-child py-5 px-5">
-                  <p class="title has-text-white">Webshop ökoszisztéma</p>
+                  <p class="title has-text-white">Archivátor</p>
                 </article>
-                <article class="tile notification is-child is-size-6 py-5 px-5">
-                  <p class="title has-text-white">Macomapp Mobilshop</p>
-                </article>
+              </div>
+              <div class="tile is-vertical">
+                <div class="tile is-parent">
+                  <article class="tile notification is-child py-5 px-5">
+                    <p class="title has-text-white">Webshop ökoszisztéma</p>
+                  </article>
+                </div>
+                <div class="tile is-parent">
+                  <article class="tile notification is-child is-size-6 py-5 px-5">
+                    <p class="title has-text-white">Macomapp Mobilshop</p>
+                  </article>
+                </div>
               </div>
             </div>
             </div>
@@ -191,10 +211,12 @@
   <!-- CONTACT FORM -->
   <section class="section has-background-light">
     <div class="container">
-      <div class="cloumns is-centered">
-        <div class="column is-half">
+      <div class="columns is-centered is-multiline">
+        <div class="column is-10">
           <h1 class="title is-size-3 mb-1">Lépjen velünk kapcsolatba!</h1>
           <p class="is-size-6 mb-5"">Felkeltettük érdeklődését? Küldje el ajánlatkérését, vegye fel velünk a kapcsolatot! Az üzenet elküldése után 72 órán belül jelentkezni fogunk.</p>
+        </div>
+        <div class="column is-half">
           <div class="field">
             <label class="label">Név</label>
             <div class="control has-icons-left">
@@ -203,7 +225,7 @@
                 <i class="fas fa-user"></i>
               </span>
             </div>
-            <p class="has-text-danger is-size-7 is-hidden" id="error-message">Kérlek add meg a teljes nevedet!</p>
+            <p class="has-text-danger is-size-7 is-hidden" id="error-message-name">Kérlek add meg a teljes nevedet!</p>
           </div>
           <div class="field">
             <label class="label">Email cím</label>
@@ -213,6 +235,7 @@
                 <i class="fas fa-envelope"></i>
               </span>
             </div>
+            <p class="has-text-danger is-size-7 is-hidden" id="error-message-email">Kérlek add meg az email címedet!</p>
           </div>
           <div class="field">
             <label class="label">Tárgy</label>

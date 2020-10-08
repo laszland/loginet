@@ -1,14 +1,15 @@
-#navbar {
-  position: fixed;
-  top: 0;
-  width: 100%;
-}
-
-#login-btn, #download-btn, #btn-more-1, #submit-btn, .is-child {
+#login-btn, #download-btn, #btn-more-1, #btn-more-2, #btn-more-3, #btn-more-4,
+#submit-btn, .is-child {
   background-color: #e5692c;
 }
 
 #cover {
   background-image: url("./assets/MAINPAGE_8eMt9a.jpg");
   background-size: cover;
+}
+
+.card, .card-content{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
